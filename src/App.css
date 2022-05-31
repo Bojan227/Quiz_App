@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  position: relative;
+}
+body {
+  background-color: #f5f7fb;
+}
+.wrong {
+  background-color: #f8bcbc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+.start-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+.start-screen.invisible {
+  display: none;
+}
+.start-screen > h1 {
+  color: #293264;
+  font-size: 3rem;
+}
+.start-screen > button {
   color: white;
+  padding: 16px 45px;
+  background-color: #4d5b9e;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 0;
+}
+.yellowCir {
+  position: absolute;
+
+  top: -10px;
+  right: 0;
+}
+.blueCir {
+  position: absolute;
+  bottom: -50px;
+  left: -100px;
+  width: 297px;
+  height: 235px;
+}
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 55px;
+}
+.check-btn {
+  background-color: #4d5b9e;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.all-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.quest-body {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.794239px solid #dbdef0;
+  gap: 35px;
+  justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.answers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 25px;
+}
+.answers > button {
+  border: 0.794239px solid #4d5b9e;
+  border-radius: 7.94239px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #f5f7fb;
+}
+.end-game {
+  display: flex;
+  gap: 15px;
 }
